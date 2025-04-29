@@ -10,7 +10,6 @@
 }
 
 
-
 .sidebar-backdrop {
   position: fixed;
   top: 0;
@@ -42,7 +41,7 @@
   transform: translateX(0);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .sidebar-container {
     position: static;
     transform: translateX(0) !important;
