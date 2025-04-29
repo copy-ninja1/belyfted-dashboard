@@ -3,18 +3,14 @@
   border: 1px solid #e0e0e0;
   border-radius: var(--space-xl);
   padding: var(--space-lg);
-  width: 100%;
-  
+  width: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-}
+  width: 100%; 
+  /* grid-column: span 2; */
 
-@media (min-width: 767px) {
-  .balanceCardContainer {
-    min-width: 37.125rem;
-  }
 }
 
 

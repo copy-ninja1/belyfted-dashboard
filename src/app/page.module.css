@@ -1,7 +1,10 @@
-.balanceWrapper{
-  padding:0.75rem 0;
-  display: flex;
+
+.balanceWrapper {
+  display: grid;
+  grid-template-columns: 4fr repeat(2, 2fr);
+
   gap: 0.5rem;
+  padding: 0.75rem 0;
   margin-bottom: var(--space-lg);
 }
 
@@ -10,7 +13,8 @@
   grid-template-columns: 2fr 1fr;
   gap: var(--space-lg);
 }
-.chartBox, .summaryBox {
+.chartBox,
+.summaryBox {
   width: 100%;
 }
 
@@ -18,10 +22,9 @@
   .grid {
     grid-template-columns: 1fr;
   }
-  .balanceWrapper{
+  .balanceWrapper {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-lg);
   }
 }
-

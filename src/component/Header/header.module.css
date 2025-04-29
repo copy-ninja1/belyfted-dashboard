@@ -87,7 +87,7 @@
   font-size: 0.75rem;
   color: #888;
 }
-@media (max-width: 400px) {
+@media (max-width: 916) {
   .title {
     display: none;
   

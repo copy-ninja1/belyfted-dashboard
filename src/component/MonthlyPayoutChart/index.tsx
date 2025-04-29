@@ -16,19 +16,16 @@ const MonthlyPayoutChart: React.FC<MonthlyPayoutChartProps> = ({ data }) => {
   const opttions: ApexOptions = {
     chart: {
       type: "bar",
-
       toolbar: { show: false },
     },
     plotOptions: {
       bar: {
-        borderRadius: 15,
+        borderRadius: 24,
         horizontal: false,
         borderRadiusApplication: "end",
       },
     },
     colors: [themeColor.primary],
-    // stroke: { lineCap: "round" },
-
     dataLabels: { enabled: false },
     xaxis: {
       categories: [
@@ -48,8 +45,25 @@ const MonthlyPayoutChart: React.FC<MonthlyPayoutChartProps> = ({ data }) => {
     },
     responsive: [
       {
+        breakpoint: 1400,
+        options: {
+          plotOptions: {
+            bar: {
+              borderRadius: 15,
+            },
+          },
+          chart: { height: 200 },
+          xaxis: { labels: { style: { fontSize: "10px" } } },
+        },
+      },
+      {
         breakpoint: 768,
         options: {
+          plotOptions: {
+            bar: {
+              borderRadius: 10,
+            },
+          },
           chart: { height: 200 },
           xaxis: { labels: { style: { fontSize: "10px" } } },
         },
