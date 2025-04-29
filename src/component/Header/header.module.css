@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-lg);
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.liveToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--color-border);
+  padding: var(--space-md)  var(--space-sm);
+  border-radius:  var(--space-sm);
+  height: 100%;
+}
+
+.toggleSwitch {
+  width: 30px;
+  height: 18px;
+  background-color: #22c55e;
+  border-radius: 10px;
+  position: relative;
+}
+
+.toggleSwitch::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background: var(--color-white);
+  border-radius: 50%;
+}
+
+.iconButton {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding:  var(--space-sm);
+  border-radius:  var(--space-sm);
+  cursor: pointer;
+}
+
+.iconMenuButton{
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding:  var(--space-sm);
+  border-radius:  var(--space-sm);
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding:  var(--space-sm) var(--space-md);
+  border-radius:  var(--space-sm);
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.sub {
+  font-size: 0.75rem;
+  color: #888;
+}
+@media (max-width: 400px) {
+  .title {
+    display: none;
+  
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    /* flex-direction: column; */
+    align-items: flex-start;
+    gap: var(--space-lg);
+    padding: var(--space-md);
+  }
+  .title {
+    font-size: var(--space-lg);
+    font-weight: 600;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+
+  .profile > div {
+    display: none;
+  }
+
+  .profile {
+    padding:  var(--space-sm);
+  }
+}
+
+@media (min-width: 1024px) {
+ .iconMenuButton{
+  display: none;
+ }
+}

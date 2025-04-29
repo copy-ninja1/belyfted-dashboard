@@ -1,0 +1,61 @@
+.featureCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.938rem;
+  padding: var(--space-lg);
+  width: 100%;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  position: absolute;
+  bottom: -5%;
+  right: -5%;
+
+}
+@media (max-width: 768px) {
+  .icon {
+    bottom: -5%;
+    right: -2%;
+  }
+}
+
+
+
+.title {
+  margin: 0;
+  font-size: var(--space-lg);
+  font-weight: 600;
+}
+
+.description {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: #666;
+}
+
+.button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: var(--space-lg) var(--space-xl);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: auto;
+  width: fit-content;
+}
+
+.button:hover {
+  background-color: #e6e6e6;
+}

@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-lg);
+  border-radius: var(--space-sm);
+  border: 1px solid var(--color-border);
+  width: 100%;
+}
+.chart{
+  min-height: 10rem;
+
+}
+.chartTitle{
+  width:100%;
+}
+.breakdown {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.payinDot,
+.payoutDot {
+  display: inline-block;
+  width: fit-content;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--space-sm);
+  margin-right: var(--space-sm);
+  color: var(--color-white);
+  font-size: var(--font-size-md);
+}
+
+.payinDot {
+  background: var(--color-primary);
+}
+
+.payoutDot {
+  background: var(--color-secondray);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.justify-between {
+  justify-content: space-between;
+}

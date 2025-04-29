@@ -1,95 +1,58 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import { BalanceCard } from "@/component/BalanceCard";
+import { FeatureCard } from "@/component/FeatureCard";
+import { UserTable } from "@/component/FundsTable";
+import MonthlyPayoutChart from "@/component/MonthlyPayoutChart";
+import TransactionSummary from "@/component/TransactionSummary";
+import { themeColor } from "@/utils/constant";
+import style from "./page.module.css";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const monthlyData = [
+    75000, 90000, 58000, 45000, 42000, 18000, 61000, 38000, 78000, 80000, 77000,
+    43000,
+  ];
+  const payin = 12200;
+  const payout = 5600;
+  const total = payin + payout;
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  return (
+    <div>
+      <div className={style.balanceWrapper}>
+        <BalanceCard
+          currencySymbol="$"
+          availableBalance="32,000.09"
+          ledgerBalance="$200"
+          lockedBalance="$189"
+          rollingReserve="$400"
+        />
+
+        <FeatureCard
+          title="Make Payout🚀"
+          description="This works like a virtual bank where you use your car..."
+          buttonText="Get Started"
+          backgroundColor="#F39C124A"
+          onButtonClick={() => alert("Make Payout clicked")}
+        />
+
+        <FeatureCard
+          title="Request Virtual Account"
+          description="This works like a virtual bank where you use your car..."
+          buttonText="Get Started"
+          backgroundColor={themeColor.tertiary}
+          onButtonClick={() => alert("Request Virtual Account clicked")}
+        />
+      </div>
+      <div className={style.grid}>
+        <div className={style.chartBox}>
+          <MonthlyPayoutChart data={monthlyData} />
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className={style.summaryBox}>
+          <TransactionSummary total={total} payin={payin} payout={payout} />
+        </div>
+      </div>
+
+      <UserTable />
     </div>
   );
 }

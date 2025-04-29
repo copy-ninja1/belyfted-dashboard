@@ -1,0 +1,34 @@
+.tableWrapper {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  background-color: var(--color-white);
+  border-radius: var(--space-sm);
+}
+
+.table-title {
+  font-size: var(--space-lg);
+  font-weight: 500;
+  margin: var(--space-md) 0;
+}
+
+
+.statusActive {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--space-lg);
+  font-weight: 500;
+  text-align: center;
+  background-color: rgba(0, 200, 83, 0.15);
+  color: #00c853;
+}
+
+.statusInactive {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--space-xs);
+  font-weight: 500;
+  text-align: center;
+  background-color: rgba(255, 82, 82, 0.15);
+  color: #ff5252;
+}

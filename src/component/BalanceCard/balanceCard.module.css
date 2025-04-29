@@ -1,0 +1,99 @@
+.balanceCardContainer {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--space-xl);
+  padding: var(--space-lg);
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (min-width: 767px) {
+  .balanceCardContainer {
+    min-width: 37.125rem;
+  }
+}
+
+
+.balanceHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-lg);
+}
+
+.flagIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.currencyCode {
+  font-weight: 600;
+  font-size: var(--space-lg);
+}
+
+.availableBalance {
+  margin-top: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.symbol {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.amount {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.balanceLabel {
+  margin-top: 0.2rem;
+  font-size: 0.875rem;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-border);
+  margin:  0 0.75rem;
+}
+
+.divider-horizontal {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  margin:   0.75rem 0;
+}
+
+.fullWidth{
+  width:100%;
+}
+.ancore{
+  text-decoration: underline;
+  color:#7B61FF;
+}
+.subBalanceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  color: #444;
+}
+
+.arrow {
+  margin-left: 0.5rem;
+  color: #888;
+  font-weight: 600;
+}
+
