@@ -87,12 +87,7 @@
   font-size: 0.75rem;
   color: #888;
 }
-@media (max-width: 916) {
-  .title {
-    display: none;
-  
-  }
-}
+
 @media (max-width: 600px) {
   .header {
     /* flex-direction: column; */
@@ -115,6 +110,13 @@
 
   .profile {
     padding:  var(--space-sm);
+  }
+}
+
+@media (max-width: 916) {
+  .title {
+    display: none;
+  
   }
 }
 
