@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./featureCard.module.css";
 import { DollarCircle } from "iconsax-reactjs";
+import { FeatureCardProps } from "./featureCard.type";
 
 export const FeatureCard: React.FC<FeatureCardProps> = ({
   title,

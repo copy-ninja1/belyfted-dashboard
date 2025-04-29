@@ -1,4 +1,4 @@
-interface FeatureCardProps {
+export interface FeatureCardProps {
   title: string;
   description: string;
   buttonText: string;
