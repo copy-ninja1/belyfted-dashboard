@@ -52,7 +52,7 @@ const MonthlyPayoutChart: React.FC<MonthlyPayoutChartProps> = ({ data }) => {
               borderRadius: 15,
             },
           },
-          chart: { height: 200 },
+          // chart: { height: 200 },
           xaxis: { labels: { style: { fontSize: "10px" } } },
         },
       },

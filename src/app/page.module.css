@@ -13,6 +13,7 @@
   grid-template-columns: 2fr 1fr;
   gap: var(--space-lg);
 }
+
 .chartBox,
 .summaryBox {
   width: 100%;
