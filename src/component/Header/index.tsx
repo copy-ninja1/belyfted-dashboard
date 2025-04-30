@@ -16,12 +16,14 @@ const Header = ({
   };
   return (
     <header className={styles.header}>
-      <button className={styles.iconMenuButton} onClick={handleOpenSidebar}>
-        <span className="material-icons">
-          <HamburgerMenu />
-        </span>
-      </button>{" "}
-      <div className={styles.title}>{title}</div>
+      <div className={styles.titleWrapper}>
+        <button className={styles.iconMenuButton} onClick={handleOpenSidebar}>
+          <span className="material-icons">
+            <HamburgerMenu />
+          </span>
+        </button>{" "}
+        <div className={styles.title}>{title}</div>
+      </div>
       <div className={styles.actions}>
         <div className={styles.liveToggle}>
           <div className={styles.toggleSwitch}></div>
